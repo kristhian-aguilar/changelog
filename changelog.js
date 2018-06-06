@@ -1,7 +1,7 @@
 let Changelog = require('generate-changelog');
 let Fs = require('fs');
 
-return Changelog.generate({ patch: true, repoUrl: 'https://github.com/kristhian-aguilar/changelog.git' })
+return Changelog.generate({ major: true, repoUrl: 'https://github.com/kristhian-aguilar/changelog.git' })
   .then(function (changelog) {
     let version = changelog.slice(4, 10);
     let date = changelog.slice(12, 22);
